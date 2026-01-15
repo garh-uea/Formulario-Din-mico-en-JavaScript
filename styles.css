@@ -1,0 +1,151 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #e3f2fd, #ffffff);
+    margin: 0;
+    color: #333;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 25px;
+    background: linear-gradient(135deg, #0d47a1, #1976d2);
+    color: white;
+}
+
+.banner img {
+    width: 90px;
+}
+
+.contenedor {
+    max-width: 1000px;
+    margin: 30px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.contenedor h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.formulario-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 40px;
+    row-gap: 22px;
+}
+
+.campo label {
+    font-weight: bold;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+
+.campo small {
+    display: none;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.campo .info {
+    display: block;
+    font-size: 13px;
+    color: #555;
+}
+
+.campo.valido small:not(.info) {
+    display: block;
+    color: green;
+}
+
+.campo.invalido small:not(.info) {
+    display: block;
+    color: red;
+}
+
+.campo-ancho {
+    grid-column: span 2;
+}
+
+.checkbox-estilizado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: linear-gradient(135deg, #f0f7ff, #e3f2fd);
+    padding: 18px 20px;
+    border-radius: 12px;
+    border: 2px dashed #90caf9;
+    font-weight: 600;
+}
+
+.checkbox-estilizado input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #1976d2;
+    cursor: pointer;
+}
+
+.checkbox-estilizado label {
+    cursor: pointer;
+    font-size: 15px;
+}
+
+
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    padding: 12px 22px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#botonEnviar {
+    background: #1976d2;
+    color: white;
+}
+
+#botonEnviar:disabled {
+    background: gray;
+}
+
+button[type="reset"] {
+    background: #e0e0e0;
+}
+
+.valido input,
+.valido select {
+    border-color: green;
+}
+
+.invalido input,
+.invalido select {
+    border-color: red;
+}
+
+@media (max-width: 768px) {
+    .formulario-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-ancho {
+        grid-column: span 1;
+    }
+}

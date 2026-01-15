@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Compu Click | Registro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="banner">
+    <img src="Logo.png" alt="Logo Compu Click">
+    <div>
+        <h1>Papelería Compu Click</h1>
+        <p>Crea tu cuenta y recibe beneficios exclusivos</p>
+    </div>
+</header>
+
+<main class="contenedor">
+    <h2>Registro de Cliente</h2>
+
+    <form id="formularioRegistro" class="formulario-grid">
+
+        <div class="campo">
+            <label>Nombres completos</label>
+            <input type="text" id="nombre">
+            <small id="errorNombre"></small>
+        </div>
+
+        <div class="campo">
+            <label>Correo electrónico</label>
+            <input type="email" id="correo">
+            <small id="errorCorreo"></small>
+        </div>
+
+        <div class="campo">
+            <label>Contraseña</label>
+            <input type="password" id="contrasena">
+            <small class="info">
+                Requisitos: mínimo 8 caracteres, una mayúscula, un número y un carácter especial.
+            </small>
+            <small id="errorContrasena"></small>
+        </div>
+
+        <div class="campo">
+            <label>Confirmar contraseña</label>
+            <input type="password" id="confirmarContrasena">
+            <small class="info">
+                Debe coincidir con la contraseña y cumplir los criterios de seguridad establecidos.
+            </small>
+            <small id="errorConfirmacion"></small>
+        </div>
+
+        <div class="campo">
+            <label>Edad</label>
+            <input type="number" id="edad">
+            <small id="errorEdad"></small>
+        </div>
+
+        <div class="campo">
+            <label>Ciudad</label>
+            <input type="text" id="ciudad">
+            <small id="errorCiudad"></small>
+        </div>
+
+        <div class="campo">
+            <label>Celular</label>
+            <input type="tel" id="celular">
+            <small id="errorCelular"></small>
+        </div>
+
+        <div class="campo">
+            <label>Categoría de interés</label>
+            <select id="categoria">
+                <option value="">Seleccione</option>
+                <option>Útiles escolares</option>
+                <option>Material de oficina</option>
+                <option>Impresiones y copias</option>
+                <option>Recargas telefónicas</option>
+                <option>Pago de servicios</option>
+                <option>Artículos tecnológicos</option>
+                <option>Regalos personalizados</option>
+            </select>
+            <small id="errorCategoria"></small>
+        </div>
+
+        <div class="campo campo-ancho">
+            <label>¿Dónde escuchó de nosotros?</label>
+            <select id="origen">
+                <option value="">Seleccione</option>
+                <option>Tienda física</option>
+                <option>Recomendación de amigo o familiar</option>
+                <option>Facebook o Instagram</option>
+                <option>Google Maps / Internet</option>
+                <option>Sitio web Compu Click</option>
+            </select>
+            <small id="errorOrigen"></small>
+        </div>
+
+        <div class="campo campo-ancho checkbox-estilizado">
+            <input type="checkbox" id="suscripcion">
+            <label for="suscripcion">Deseo recibir promociones y descuentos exclusivos</label>
+        </div>
+
+        <div class="botones campo-ancho">
+            <button type="submit" id="botonEnviar" disabled>Crear cuenta</button>
+            <button type="reset" id="botonLimpiar">Limpiar</button>
+        </div>
+
+    </form>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
