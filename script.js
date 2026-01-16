@@ -120,9 +120,8 @@ botonLimpiar.addEventListener("click", () => {
 
 function limpiarEstados() {
     document.querySelectorAll(".campo").forEach(campo => {
-        campo.classList.remove("valido");
-        campo.classList.add("invalido");
+        campo.classList.remove("valido", "invalido");
         const small = campo.querySelector("small:not(.info)");
-        if (small) small.innerText = "✖ Campo inválido";
+        if (small) small.innerText = "";
     });
 }
